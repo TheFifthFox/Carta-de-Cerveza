@@ -1,0 +1,186 @@
+/* Estilos generales para pantallas grandes */
+body {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-image: url('https://images.unsplash.com/photo-1506968430777-bf7784a87f23?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 5em;
+    font-weight: bold;
+    background-image: url('https://images.unsplash.com/photo-1545486332-9e0999c535b2?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'); /* Imagen de textura */
+    background-size: cover;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    text-align: center;
+}
+
+.bebida-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Cuerpo del botón */
+.bebida-item {
+    overflow: hidden; /* Oculta el contenido que desborda */
+    white-space: nowrap; /* Evita que el texto se divida en varias líneas */
+    text-overflow: ellipsis; /* Añade "..." si el texto es demasiado largo */
+    display: flex;
+    align-items: left;
+    background-image: url('https://images.unsplash.com/photo-1535242208474-9a2793260ca8?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+    background-size: cover;
+    background-position: center;
+    background-repeat: repeat;
+    width: 45%;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    padding: 2px;
+}
+
+.bebida-item:hover {
+    background-color: #ebebeb;
+}
+
+/* Imagen de la bebida */
+.bebida-item img {
+    width: 100px;
+    height: 110px;
+    border-radius: 5px;
+    margin-right: 20px;
+}
+
+.bebida-item div {
+    flex: 1;
+    text-align: left;
+}
+
+/* Nombre de cerveza */
+.bebida-item h3 {
+    margin: 0;
+    color: #c2c051d5;
+    background-color: rgba(0, 0, 0, 0.904);
+    padding: 5px;
+    border-radius: 5px;
+    display: inline-block;
+}
+
+/* Tipo de cerveza */
+.bebida-item h4 {
+    margin: 0;
+    color: #8dc251d5;
+    background-color: rgba(0, 0, 0, 0.904);
+    padding: 5px;
+    border-radius: 5px;
+    display: inline-block;
+}
+.bebida-item p {
+    margin: 5px 0;
+    color: #ffffff;
+    background-color: rgba(0, 0, 0, 0.904);
+    padding: 5px;
+    border-radius: 5px;
+    display: inline-block;
+}
+
+/* Estilos para el modal (pop-up) */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background-color: #e5d5c5;
+    margin: 5% auto;
+    padding: 20px;
+    border: 5px solid #888;
+    width: 80%;
+    max-width: 600px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: left;
+}
+
+.modal-content h2 {
+    color: #8c5a33;
+}
+
+.modal-content p {
+    color: #5c4033;
+    line-height: 1.6;
+    text-align: justify;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover, .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+footer {
+    margin-top: 50px;
+    font-size: 12px;
+    color: #000000;
+}
+
+/* Media Queries para adaptarse a diferentes pantallas */
+
+/* Tablets */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 3.5em;
+    }
+
+    .bebida-item {
+        width: 80%;
+    }
+
+    .modal-content {
+        width: 90%;
+    }
+}
+
+/* Smartphones */
+@media (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 2.5em;
+    }
+
+    .bebida-item {
+        width: 90%;
+    }
+
+    .bebida-item img {
+        width: 80px;
+        height: 90px;
+    }
+
+    .modal-content {
+        width: 95%;
+    }
+}

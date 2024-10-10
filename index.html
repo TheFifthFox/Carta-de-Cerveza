@@ -1,0 +1,116 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carta de Cervezas</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<h1>Cervezas</h1>
+
+<!-- Listado interactivo de bebidas -->
+<div class="bebida-list">
+    <div class="bebida-item" onclick="mostrarBebida(0)">
+        <img src="https://5sentidos.es/wp-content/uploads/2024/01/Cerveza-1906-Reserva-Especial-Botella-33CL-NR-1200x1200.png" alt="Estrella Galicia Especial 1906">
+        <div>
+            <h3>Estrella Galicia Especial 1906</h3>
+            <p>2,5€</p>
+            <h4>Lager</h4>
+        </div>
+    </div>
+    <div class="bebida-item" onclick="mostrarBebida(1)">
+        <img src="https://sgfm.elcorteingles.es/SGFM/dctm/MEDIA03/202001/30/00118603602089____2__600x600.jpg" alt="Sagres">
+        <div>
+            <h3>Sagres</h3>
+            <p>2€</p>
+            <h4>Pilsner</h4>
+        </div>
+    </div>
+    <div class="bebida-item" onclick="mostrarBebida(2)">
+        <img src="https://bodegasjavier.es/wp-content/uploads/2020/08/Alhambra-especial-1925.jpg" alt="Alhambra Reserva 1925">
+        <div>
+            <h3>Alhambra Reserva 1925</h3>
+            <p>2,5€</p>
+            <h4>Bohemian Pilsner</h4>
+        </div>
+    </div>
+    <div class="bebida-item" onclick="mostrarBebida(3)">
+        <img src="https://www.cervezasonline.com/4801-large_default/corona-355cl.jpg" alt="Corona">
+        <div>
+            <h3>Corona</h3>
+            <p>2,5€</p>
+            <h4>Pilsner</h4>
+        </div>
+    </div>
+    <div class="bebida-item" onclick="mostrarBebida(4)">
+        <img src="https://5sentidos.es/wp-content/uploads/2020/10/Desesperados_botella_33_CL_1-1200x1200.jpg" alt="Desperados">
+        <div>
+            <h3>Desperados</h3>
+            <p>2,5€</p>
+            <h4>Lager</h4>
+        </div>
+    </div>
+    <div class="bebida-item" onclick="mostrarBebida(5)">
+        <img src="https://www.atochavallecas.com/wp-content/uploads/2023/07/www.atochavallecas.com-cervezas-mahou-5-estrellas.jpg" alt="Mahou 5 Estrellas">
+        <div>
+            <h3>Mahou 5 Estrellas</h3>
+            <p>3€</p>
+            <h4>Pilsner</h4>
+        </div>
+    </div>    
+    <div class="bebida-item" onclick="mostrarBebida(6)">
+        <img src="https://static.carrefour.es/hd_510x_/img_pim_food/008698_00_2.jpg" alt="Judas">
+        <div>
+            <h3>Judas</h3>
+            <p>3,5€</p>
+            <h4>Brouwerij Alken - Maes</h4>
+        </div>
+    </div>
+    <div class="bebida-item" onclick="mostrarBebida(7)">
+        <img src="https://www.cervezasonline.com/4736-thickbox_default/grimbergen-double-33cl.jpg" alt="Grimbergen">
+        <div>
+            <h3>Grimbergen</h3>
+            <p>3€</p>
+            <h4>Amber Ale</h4>
+        </div>
+    </div>
+    <div class="bebida-item" onclick="mostrarBebida(8)">
+        <img src="https://www.encopadebalon.com/cdn/shop/products/4276.jpg?v=1709546356" alt="1906 Red Vintage">
+        <div>
+            <h3>1906 Red Vintage</h3>
+            <p>3€</p>
+            <h4>Red Ale</h4>
+        </div>
+    </div>
+    <div class="bebida-item" onclick="mostrarBebida(9)">
+        <img src="https://produits.bienmanger.com/18809-0w600h600_Blond_Paulaner_Hefe_Weissbier.jpg" alt="Paulaner">
+        <div>
+            <h3>Paulaner</h3>
+            <p>4€</p>
+            <h4>Weizen-Weissbier</h4>
+        </div>
+    </div>
+</div>
+
+<!-- Modal (Pop-up) -->
+<div id="bebidaModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="cerrarModal()">&times;</span>
+        <h2 id="bebidaNombre">Nombre de la bebida</h2>
+        <p id="bebidaDescripcion">Descripción detallada de la bebida.</p>
+        <p><strong>Maridaje:</strong> <span id="bebidaNotas"></span></p>
+        <p><strong>IBU:</strong> <span id="bebidaIBU"></span></p>
+        <p><strong>Grados:</strong> <span id="bebidaGrados"></span></p>
+    </div>
+</div>
+
+<footer>
+    &copy; 2024 Carta de Cervezas - Bugatti Pub Peris
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
